@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Tahoma, Arial;
+}
+
+.quis-app {
+    display: inline;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    background-color: #eee;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    width: 800px;
+    height: 700px;
+}
+
+.quis-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 98%;
+    margin: 10px auto;
+    height: 50px;
+    background-color: white;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+h2 {
+    padding: 30px;
+    direction: rtl;
+}
+
+.quis-area {
+    width: 98%;
+    margin: 10px auto;
+    /* height: 500px; */
+    background-color: white;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.answers-area {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    height: 300px;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.answers-area .answer {
+    padding: 20px;
+    font-size: 25px;
+    direction: rtl;
+}
+
+.answers-area .answer input+label {
+    cursor: pointer;
+}
+
+.answers-area .answer:not(:last-child) {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.answers-area .answer input[type="radio"]:checked+label {
+    color: #0075ff;
+}
+
+.submit {
+    margin-top: 20px;
+    width: 98%;
+    transform: translate(1%, 10px);
+    height: 50px;
+    border: none;
+    background-color: #7ec5e3;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.bulets {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width: 98%;
+    transform: translate(1%, 25px);
+    height: 60px;
+    border-radius: 6px;
+    align-items: center;
+    -webkit-transform: translate(1%, 25px);
+    -moz-transform: translate(1%, 25px);
+    -ms-transform: translate(1%, 25px);
+    -o-transform: translate(1%, 25px);
+}
+
+.bulets .spans {
+    display: flex;
+    flex: 1;
+    margin-left: 20px;
+}
+
+.bulets .spans .active {
+    background-color: #0072ff;
+}
+
+.bulets .spans span {
+    margin: 5px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #eee;
+}
+
+.bulets .countDoun {
+    display: flex;
+    margin-right: 20px;
+    font-size: 20px;
+    color: #5dc7e4;
+}
+
+.results {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 370px;
+    height: 100px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.perfect {
+    font-weight: bold;
+    color: #0072ff;
+}
+
+@media(max-width:767px) {
+    .quis-app {
+        width: 360px;
+    }
+    .quis-area h2 {
+        font-size: 16px;
+        padding: 17px;
+    }
+    .bulets .spans {
+        margin-left: 0;
+    }
+    .bulets .spans span {
+        width: 12px;
+        height: 12px;
+    }
+    .answers-area {
+        height: 265px;
+    }
+    .answers-area .answer {
+        font-size: 15px;
+    }
+    .results {
+        width: 355px;
+        font-size: 14px;
+    }
+}
+
+@media(max-width:370px) {
+    .quis-app {
+        width: 338px;
+    }
+}
