@@ -173,7 +173,7 @@ h2 {
         height: 12px;
     }
     .answers-area {
-        height: 265px;
+        height: fit-content;
     }
     .answers-area .answer {
         font-size: 12px;
